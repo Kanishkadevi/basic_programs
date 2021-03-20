@@ -1,20 +1,20 @@
 #include<stdio.h>
 #include<string.h>
-void reverseSentence();
 int main()
 {
-	char c[100];
+	char c[100],reversed_str[100];
+        int i,j,len;
 	printf("enter the string:");
 	gets(c);
-	reverseSentence(c);
-	return 0;
+        len=strlen(c);
+        j=0;
+        for(i=len-1;i>=0;i--)
+        {
+           reversed_str[j]=c[i];
+           j++;
+         }
+         reversed_str[j]='/0';
+         printf("the final string is:%s",reversed_str);
+         return 0;
 }
-void reverseSentence(char *ch )
-{
-	int len,i;
-	len=strlen(ch);
-	for(i=len;i>=len)
-	{
-		printf("%s",ch[i]);
-	}
-}
+	
